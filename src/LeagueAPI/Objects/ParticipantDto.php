@@ -25,160 +25,162 @@ namespace RiotAPI\LeagueAPI\Objects;
  *
  * Used in:
  *   match (v4)
- *     @link https://developer.riotgames.com/apis#match-v4/GET_getMatchIdsByTournamentCode
- *     @link https://developer.riotgames.com/apis#match-v4/GET_getMatchByTournamentCode
+ * @link https://developer.riotgames.com/apis#match-v4/GET_getMatchIdsByTournamentCode
+ * @link https://developer.riotgames.com/apis#match-v4/GET_getMatchByTournamentCode
  *   tft-match (v1)
- *     @link https://developer.riotgames.com/apis#tft-match-v1/GET_getMatchIdsByPUUID
+ * @link https://developer.riotgames.com/apis#tft-match-v1/GET_getMatchIdsByPUUID
  *
  * @linkable getStaticChampion($championId)
+ * @linkable getStaticSummonerSpell($spell1Id)
+ * @linkable getStaticSummonerSpell($spell2Id)
  *
  * @package RiotAPI\LeagueAPI\Objects
  */
 class ParticipantDto extends ApiObjectLinkable
 {
-	/**
-	 *   Participant statistics.
-	 *
-	 * @var ParticipantStatsDto $stats
-	 */
-	public $stats;
+    /**
+     *   Participant statistics.
+     *
+     * @var ParticipantStatsDto $stats
+     */
+    public $stats;
 
-	/** @var int $participantId */
-	public $participantId;
+    /** @var int $participantId */
+    public $participantId;
 
-	/**
-	 *   List of legacy Rune information. Not included for matches played with 
-	 * Runes Reforged.
-	 *
-	 * @var RuneDto[] $runes
-	 */
-	public $runes;
+    /**
+     *   List of legacy Rune information. Not included for matches played with
+     * Runes Reforged.
+     *
+     * @var RuneDto[] $runes
+     */
+    public $runes;
 
-	/**
-	 *   Participant timeline data.
-	 *
-	 * @var ParticipantTimelineDto $timeline
-	 */
-	public $timeline;
+    /**
+     *   Participant timeline data.
+     *
+     * @var ParticipantTimelineDto $timeline
+     */
+    public $timeline;
 
-	/**
-	 *   100 for blue side. 200 for red side.
-	 *
-	 * @var int $teamId
-	 */
-	public $teamId;
+    /**
+     *   100 for blue side. 200 for red side.
+     *
+     * @var int $teamId
+     */
+    public $teamId;
 
-	/**
-	 *   Second Summoner Spell id.
-	 *
-	 * @var int $spell2Id
-	 */
-	public $spell2Id;
+    /**
+     *   Second Summoner Spell id.
+     *
+     * @var int $spell2Id
+     */
+    public $spell2Id;
 
-	/**
-	 *   List of legacy Mastery information. Not included for matches played with 
-	 * Runes Reforged.
-	 *
-	 * @var MasteryDto[] $masteries
-	 */
-	public $masteries;
+    /**
+     *   List of legacy Mastery information. Not included for matches played with
+     * Runes Reforged.
+     *
+     * @var MasteryDto[] $masteries
+     */
+    public $masteries;
 
-	/**
-	 *   Highest ranked tier achieved for the previous season in a specific subset 
-	 * of queueIds, if any, otherwise null. Used to display border in game loading 
-	 * screen. Please refer to the Ranked Info documentation. (Legal values: CHALLENGER, 
-	 * MASTER, DIAMOND, PLATINUM, GOLD, SILVER, BRONZE, UNRANKED).
-	 *
-	 * @var string $highestAchievedSeasonTier
-	 */
-	public $highestAchievedSeasonTier;
+    /**
+     *   Highest ranked tier achieved for the previous season in a specific subset
+     * of queueIds, if any, otherwise null. Used to display border in game loading
+     * screen. Please refer to the Ranked Info documentation. (Legal values: CHALLENGER,
+     * MASTER, DIAMOND, PLATINUM, GOLD, SILVER, BRONZE, UNRANKED).
+     *
+     * @var string $highestAchievedSeasonTier
+     */
+    public $highestAchievedSeasonTier;
 
-	/**
-	 *   First Summoner Spell id.
-	 *
-	 * @var int $spell1Id
-	 */
-	public $spell1Id;
+    /**
+     *   First Summoner Spell id.
+     *
+     * @var int $spell1Id
+     */
+    public $spell1Id;
 
-	/** @var int $championId */
-	public $championId;
+    /** @var int $championId */
+    public $championId;
 
-	/**
-	 *   Participant placement upon elimination.
-	 *
-	 * @var int $placement
-	 */
-	public $placement;
+    /**
+     *   Participant placement upon elimination.
+     *
+     * @var int $placement
+     */
+    public $placement;
 
-	/**
-	 *   Participant Little Legend level. Note: This is not the number of active 
-	 * units.
-	 *
-	 * @var int $level
-	 */
-	public $level;
+    /**
+     *   Participant Little Legend level. Note: This is not the number of active
+     * units.
+     *
+     * @var int $level
+     */
+    public $level;
 
-	/**
-	 *   The round the participant was eliminated in. Note: If the player was 
-	 * eliminated in stage 2-1 their last_round would be 5.
-	 *
-	 * @var int $last_round
-	 */
-	public $last_round;
+    /**
+     *   The round the participant was eliminated in. Note: If the player was
+     * eliminated in stage 2-1 their last_round would be 5.
+     *
+     * @var int $last_round
+     */
+    public $last_round;
 
-	/**
-	 *   The number of seconds before the participant was eliminated.
-	 *
-	 * @var float $time_eliminated
-	 */
-	public $time_eliminated;
+    /**
+     *   The number of seconds before the participant was eliminated.
+     *
+     * @var float $time_eliminated
+     */
+    public $time_eliminated;
 
-	/**
-	 *   Participant's companion.
-	 *
-	 * @var CompanionDto $companion
-	 */
-	public $companion;
+    /**
+     *   Participant's companion.
+     *
+     * @var CompanionDto $companion
+     */
+    public $companion;
 
-	/**
-	 *   A complete list of traits for the participant's active units.
-	 *
-	 * @var TraitDto[] $traits
-	 */
-	public $traits;
+    /**
+     *   A complete list of traits for the participant's active units.
+     *
+     * @var TraitDto[] $traits
+     */
+    public $traits;
 
-	/**
-	 *   Number of players the participant eliminated.
-	 *
-	 * @var int $players_eliminated
-	 */
-	public $players_eliminated;
+    /**
+     *   Number of players the participant eliminated.
+     *
+     * @var int $players_eliminated
+     */
+    public $players_eliminated;
 
-	/**
-	 *   Encrypted PUUID.
-	 *
-	 * @var string $puuid
-	 */
-	public $puuid;
+    /**
+     *   Encrypted PUUID.
+     *
+     * @var string $puuid
+     */
+    public $puuid;
 
-	/**
-	 *   Damage the participant dealt to other players.
-	 *
-	 * @var int $total_damage_to_players
-	 */
-	public $total_damage_to_players;
+    /**
+     *   Damage the participant dealt to other players.
+     *
+     * @var int $total_damage_to_players
+     */
+    public $total_damage_to_players;
 
-	/**
-	 *   A list of active units for the participant.
-	 *
-	 * @var UnitDto[] $units
-	 */
-	public $units;
+    /**
+     *   A list of active units for the participant.
+     *
+     * @var UnitDto[] $units
+     */
+    public $units;
 
-	/**
-	 *   Gold left after participant was eliminated.
-	 *
-	 * @var int $gold_left
-	 */
-	public $gold_left;
+    /**
+     *   Gold left after participant was eliminated.
+     *
+     * @var int $gold_left
+     */
+    public $gold_left;
 }
