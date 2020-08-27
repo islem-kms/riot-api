@@ -1,7 +1,7 @@
 {
 	"name": "islem-kms/riot-api",
 	"type": "library",
-	"description": "Riot League of Legends & DataDragon API wrapper for PHP7",
+	"description": "Riot League of Legends & DataDragon API wrapper for PHP7 (Reference to Daniel Dolejska (just a fork)",
 	"keywords": ["riot", "league of legends", "data dragon", "api", "wrapper", "php7"],
 	"homepage": "https://github.com/islem-kms/riot-api",
 	"license": "GPL-3.0-or-later",
